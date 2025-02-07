@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | AI Chatbot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <style>
+        /* Background Animation */
+        body {
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Contact Form Styling */
+        .contact-container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+            color: white;
+        }
+
+        .contact-container h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .contact-container p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-container a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-container a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .contact-form button {
+            padding: 12px;
+            background: white;
+            color: #6a11cb;
+            font-weight: bold;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    {% include 'navbar.html' %}
+
+    <!-- Contact Form Section -->
+    <section class="flex flex-col items-center justify-center flex-grow w-full px-4">
+        <div class="contact-container">
+            <h1>Contact Us 📩</h1>
+            <p>Email: <a href="mailto:pallavs2020@gmail.com">pallavs2020@gmail.com</a></p>
+            <p>GitHub: <a href="https://github.com/PALLAV110" target="_blank">GitHub Profile</a></p>
+
+            <!-- Contact Form -->
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    {% include 'footer.html' %}
+
+</body>
+</html>

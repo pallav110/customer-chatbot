@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Background Animation */
+        body {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Smooth Fade In */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInAnimation 1s ease-out forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Glassmorphism Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Button Effects */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn-primary {
+            background: #ffcc00;
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background: #ffd633;
+            transform: scale(1.05);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="text-white font-sans">
+
+    <!-- Navbar -->
+    {% include 'navbar.html' %}
+
+    <!-- Hero Section -->
+    <section class="h-screen flex flex-col justify-center items-center text-center px-6 fade-in">
+        <div class="glass max-w-3xl p-10">
+            <h1 class="text-6xl font-extrabold mb-6 drop-shadow-lg">Your AI Chat Assistant 🤖</h1>
+            <p class="text-xl max-w-2xl mx-auto leading-loose text-gray-200 mb-8">
+                A smart AI-powered chatbot that assists you with queries, recommendations, and insightful conversations.
+            </p>
+            <a href="{{ url_for('chatbot') }}" class="btn btn-primary shadow-lg">
+                Start Chatting 🚀
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 text-center bg-gray-900 fade-in">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-6 text-indigo-400">About This Project</h2>
+            <p class="text-lg leading-loose text-gray-300">
+                This AI chatbot is built using NLP and deep learning techniques. It understands user queries, 
+                provides meaningful responses, and enhances user interactions with intelligent conversation capabilities.
+            </p>
+            <p class="text-lg leading-loose text-gray-300 mt-4">
+                Features Include:  
+                ✅ Real-time Chatting 🗨️  
+                ✅ Smart AI Responses 🤖  
+                ✅ Context-Aware Conversations 📚  
+                ✅ Secure & Scalable 🔐  
+            </p>
+            <a href="{{ url_for('about') }}" class="mt-6 btn btn-secondary shadow-md">
+                Learn More 📖
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    {% include 'footer.html' %}
+
+</body>
+</html>
