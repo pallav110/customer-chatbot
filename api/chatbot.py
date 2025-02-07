@@ -36,7 +36,7 @@ else:
     index = None
 
 # Groq API Key (Replace with yours)
-GROQ_API_KEY = "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"
+GROQ_API_KEY = ""
 
 if not GROQ_API_KEY:
     raise ValueError("❌ Groq API Key is missing! Set it properly.")
