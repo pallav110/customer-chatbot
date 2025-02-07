@@ -22,7 +22,6 @@ An intelligent chatbot that answers **customer-related queries** using **AI & FA
 ## **📂 Project Structure**  
 
 ```
-/dti-and-ai-project
 │── /static              # Frontend Assets (CSS, JS)
 │    │── styles.css       # Stylesheet
 │    │── chat.js          # Chatbot functionality (JS)
@@ -45,7 +44,6 @@ An intelligent chatbot that answers **customer-related queries** using **AI & FA
 ### **1️⃣ Clone the Repository**  
 ```bash
 git clone https://github.com/pallav110/customer-chatbot.git
-cd customer-chatbot
 ```
 
 ### **2️⃣ Install Dependencies**  
