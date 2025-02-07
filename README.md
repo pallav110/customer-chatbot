@@ -6,7 +6,6 @@ Here’s a well-structured **`README.md`** file for your project. Just copy and 
 
 An intelligent chatbot that answers **customer-related queries** using **AI & FAISS-powered search**. It understands user questions, retrieves customer insights from a dataset, and responds accordingly. If no relevant data is found, it uses an **AI model (Groq API)** for general queries.  
 
-🚀 **Live Demo**: *(Add the deployment link here if you host it somewhere, or remove this line.)*  
 
 ---
 
